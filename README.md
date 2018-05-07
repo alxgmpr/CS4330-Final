@@ -8,17 +8,24 @@ Alex Gompper, Darrell Martin, Zach Pierucci
 ### Language purpose / genesis
 
 1) **Why was the language created?**
+   * Java was created to use as few dependencies as possible while being a language built to be used across all platforms. Java Virtual Machine is a large part of what allows it to be used across platforms.
 2) **What problems was the language trying to address?**
+   * Memory management was the main issue that was trying to be addressed by Java. A garbage collection system was implemented to help with this problem. Java also helps simplify some of the complexity of other languages with its use of different libraries and built in functions.
 3) **Is the language a reaction to a previous language or a replacement for another language?**
+   * Java was a reaction to the previous dominant language of C++. It tried to fix some of the problems associated with C++, but while still using the OO concepts.
 
 ### Unique features of the language
 
 1) **Does the language have any particularly unique features?**
+   * One of the unique features of Java is the Java Virtual Machine.  It also is very flexible and can be ran on multiple platforms.
 
 ### Name spaces
 
 1) **How are name spaces implemented?**
+   * Defining a package: `package final;`
+   * You can also import other packages and that would look like: `import java.io;`
 2) **How are name spaces used?**
+   * They help group related classes by defining a namespace.  This helps to avoid naming conflicts and keep things organized. Packages are defined at the top of the page and will define which package the class belongs to.
 
 ### Types
 
