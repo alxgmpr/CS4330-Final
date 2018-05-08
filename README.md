@@ -130,7 +130,56 @@ import java.io;
 ### Multithreading
 
 1) **Threads or thread-like abilities**
+ * Java supports multi-threaded applications and it is actually multi-threaded by default (i.e. the JVM is one thread and your program is another).
+
 2) **How is multitasking accomplished?**
+ * By either Implementing the ```Runnable``` interface
+
+```java
+ class MultithreadingDemo implements Runnable
+{
+    public void run()
+    {
+        try
+        {
+            // Displaying the thread that is running
+            System.out.println ("Thread " +
+                                Thread.currentThread().getId() +
+                                " is running");
+ 
+        }
+        catch (Exception e)
+        {
+            // Throwing an exception
+            System.out.println ("Exception is caught");
+        }
+    }
+}
+```
+
+ * Or by Extending the ```Thread``` class
+```java
+class MultithreadingDemo extends Thread
+{
+    public void run()
+    {
+        try
+        {
+            // Displaying the thread that is running
+            System.out.println ("Thread " +
+                  Thread.currentThread().getId() +
+                  " is running");
+ 
+        }
+        catch (Exception e)
+        {
+            // Throwing an exception
+            System.out.println ("Exception is caught");
+        }
+    }
+}
+
+```
 
 ---
 
