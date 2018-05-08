@@ -66,6 +66,12 @@ class MyClass {
 ```
 2) **Creating new instances**
   * Instances of objects are created using the “new” keyword and a call to the constructor.
+
+```java
+Point originOne = new Point(23, 94);
+Rectangle rectOne = new Rectangle(originOne, 100, 200);
+Rectangle rectTwo = new Rectangle(50, 100);
+```
 3) **Constructing / initializing**
   * Every class has a constructor even if you do not explicitly write a constructor. There is always a default constructor that takes no arguments, but if you explicitly define a no-arg constructor, the default constructor disappears.
 4) **Destructing / de-initializing**
