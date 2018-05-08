@@ -188,7 +188,7 @@ server.addEventListener("message", clientData.class, new DataListener<clientData
 ### Singleton
 
 1) **How is a singleton implemented?**
- * A singleton is created by making a constructor as private, then writing a static method that has return type object of this singleton class.
+ 	* A singleton is created by making a constructor as private, then writing a static method that has return type object of this singleton class.
  
 ```java
 public class MySingleTon {
@@ -223,9 +223,9 @@ public class MySingleTon {
 ```
 
 2) **Can it be made thread-safe?**
- * Yes they can.
+ 	* Yes they can. By creating the instance variable at the time of initialization, the instance is thread safe.
 3) **Can the singleton instance be lazily instantiated?**
- * Yes, requiring no memory or resources until needed.
+ 	* Yes, requiring no memory or resources until needed.
 
 ### Procedural programming
 
