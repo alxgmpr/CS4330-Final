@@ -151,6 +151,7 @@ None, int, long, float, complex, bool, str, unicode, basestring, list, tuple, xr
     * Only reference types are supported in Python. 
 3) **Can new value types be created?**
     * New types can be created in Python by writing the typedef in C. However the same functionality can usually be achieved by defining a new class.
+    * Once instantiated, these attributes can be accessed directly.
 ```python
 class Particle:
     def __init__(self, mass, position, velocity, force):
@@ -159,7 +160,6 @@ class Particle:
         self.velocity = velocity
         self.force = force
 ```
-    * Once instantiated, these attributes can be accessed directly.
 
 ### Classes
 
@@ -174,13 +174,16 @@ class Color:
         self.transparency = transparency
 ```
 2) **Creating new instances**
-    * New instances can be created by calling the class name
+    * New instances can be created by calling the class constructor
+3) **Constructing / initializing**
 ```python
 c = Color(40, 20, 100, 1)
 ```
-3) **Constructing / initializing**
 4) **Destructing / de-initializing**
     * Python uses the `del` keyword to destroy instances.
+```python
+del c
+```
 
 ### Instance reference name in data type (class)
 
@@ -210,7 +213,20 @@ f = Foo()
 print(f.bar)  # Output: Hello World!
 ```
 2) **Backing variables?**
-    * Python does not use backing variables.
+    * Backing variables can exist to an extent within a class by using method decorators. 
+```python
+class Obj:
+
+    ...
+
+    @property
+    def attribute(self): 
+        return self._attribute
+
+    @attribute.setter
+    def attribute_setter(self, value):
+        self._attribute = value
+```
 3) **Computed properties?**
     * Computed properties are easy to implement in a class. 
 ```python
@@ -228,8 +244,16 @@ class Particle:
     * Python has interface support in the form of abstract base classes, which were introduced after v2.6.
 2) **What abilities does it have?**
 3) **How is it used?**
+    * Abstract base classes can be used in Python when you don't want to instantiate the parent class, but still provide important functionality to subsequent child classes.
 
 ### Inheritance / extension
+    * Python has support for multiple inheritance.
+```python
+class LineCook(Employee, Person):
+    ...
+    
+    # With multiple inheritance, LineCook > Employee > Person
+```
 ### Reflection
 
 1) **What reflection abilities are supported?**
@@ -241,10 +265,11 @@ class Particle:
     * Python automates the handling of memory allocation for object instances. The memory manager uses a private heap and manages memory dynamically.
 2) **How does it work?**
     * At the lowest level, a raw memory allocator ensures that there is enough room in the private heap for storing all Python-related data by interacting with the memory manager of the operating system. 
-    * On top of this, 
+    * On top of this, other allocators provide memory for object-level instances.
 3) **Garbage collection?**
     * The memory manager automates garbage collection automatically. 
 4) **Automatic reference counting?**
+    * Python has support for automatic reference counting. 
 
 ### Comparisons of references and values
 
@@ -270,7 +295,29 @@ except ValueError:
 ```
    
 ### Lambda expressions, closures, or functions as types
+    * Lambda expressions are easy to implement in Python.
+```python
+g = lambda x: x**2
+
+g(3)  # Output: 9
+```
+
 ### Implementation of listeners and event handlers
+
+    * Python has limited support for event handling. One of the more popular methodologies is to subscribe to a methods event.
+    * There are other third party libraries for event listeners such as [PyNotify](https://pypi.org/project/py-notify/).
+```python
+class MyBroadcaster()
+    def __init__():
+        self.onChange = EventHook()
+
+b = MyBroadcaster()
+
+b.onChange += myFunction
+
+b.onChange.fire()
+```
+
 ### Singleton
 
 1) **How is a singleton implemented?**
@@ -281,11 +328,61 @@ except ValueError:
 
 1) **Does the language support procedural programming?**
 
+* Python is very procedural. Python is always executed top-to-bottom by the interpreter.
+```python
+a = 0
+print(a)
+a += 1
+print(a)
+a += 1
+print(a)
+
+# Output:
+# 0
+# 1
+# 2
+```
+
 ### Functional programming
 
 1) **Does the language support functional programming?**
 
+* Python supports functional programming.
+```python
+def step_one(foo):
+    return foo * 2
+    
+def step_two(foo):
+    return foo + 3
+    
+print(step_two(step_one(2)))  # Output: 7
+```
+
 ### Multithreading
 
 1) **Threads or thread-like abilities**
+    * Threading in Python is performed using the Threading module and subclassing the thread object.
 2) **How is multitasking accomplished?**
+
+```python
+import Threading
+
+
+class Worker(Threading.thread):
+    def __init__(self, id):
+        Threading.thread.__init__(self)
+        self.foo = 0
+        self.id = id
+    
+    def run():
+        for i in range(99999):
+            print("[{}] :: {}".format(self.id, self.foo))
+            self.foo += 1
+            
+
+workers = []           
+for i in range(10):
+    workers.append(Worker(i))
+    workers[i].daemon = True
+    workers[i].start()
+```
