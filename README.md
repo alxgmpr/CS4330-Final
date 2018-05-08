@@ -120,8 +120,11 @@ public Obj(int x, int y) {
 ### Singleton
 
 1) **How is a singleton implemented?**
+ * A singleton is created by making a constructor as private, then writing a static method that has return type object of this singleton class.
 2) **Can it be made thread-safe?**
+ * Yes they can.
 3) **Can the singleton instance be lazily instantiated?**
+ * Yes, requiring no memory or resources until needed.
 
 ### Procedural programming
 
