@@ -149,6 +149,9 @@ class TestClass implements myInterface {  
 
 1) **Which does the language use? (null/nil/etc)**
 	* Java uses `null`
+```java
+String str = null;
+```
 2) **Does the language have features for handling null/nil references?**
 	* Exceptions are thrown when a null variable is improperly referenced.
 
