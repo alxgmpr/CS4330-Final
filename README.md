@@ -131,6 +131,15 @@ catch (exception(type) e(object))
 }
 ```
 ### Lambda expressions, closures, or functions as types
+ * Java doesn’t support closures, but instead uses nested classes which can be either local or anonymous.  Java also uses lambda expressions to define these inner classes.  A lambda expression can be noticed by the ```->```
+ 
+```java
+	(parameter-list) -> {	
+	// statements
+}
+```
+ 
+
 ### Implementation of listeners and event handlers
  * Java uses multiple different listeners and event handlers especially for handling different events such as actionEvent and mouseClick.
  
