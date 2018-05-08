@@ -208,7 +208,7 @@ class MultithreadingDemo extends Thread
 
 1) **Does the language have any particularly unique features?**
     * Python has built in functionality for multiple assignement, meaning an iterable object can be automatically unpacked into multiple variables.
-    * Python includes a command line interpreter.
+    * Python includes an interactive command line interpreter.
 
 ### Name spaces
 
@@ -248,7 +248,7 @@ class Particle:
 ### Classes
 
 1) **Defining**
-    * Class definitions require at least a `__init__` method with the basic object attributes. This is the classe's constructor.
+    * Class definitions require at least a `__init__` method with the basic object attributes. This is the class's constructor.
 ```python
 class Color:
     def __init__(self, red, green, blue, transparency):
