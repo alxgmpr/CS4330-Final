@@ -163,7 +163,7 @@ class MultithreadingDemo extends Thread
 {
     public void run()
     {
-        try
+        try
         {
             // Displaying the thread that is running
             System.out.println ("Thread " +
