@@ -119,6 +119,17 @@ public Obj(int x, int y) {
 	* Exceptions are thrown when a null variable is improperly referenced.
 
 ### Errors and exception handling
+	* Java uses `try` and `catch` blocks to contain exceptions and handle them as they occur.
+```java
+try
+{
+     // code that might throw an exception
+}
+catch (exception(type) e(object))
+{
+     // logging and/or handing code to prevent the error from crashing the rest of the program
+}
+```
 ### Lambda expressions, closures, or functions as types
 ### Implementation of listeners and event handlers
  * Java uses multiple different listeners and event handlers especially for handling different events such as actionEvent and mouseClick.
