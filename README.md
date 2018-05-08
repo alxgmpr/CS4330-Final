@@ -247,7 +247,7 @@ class Particle:
     * Abstract base classes can be used in Python when you don't want to instantiate the parent class, but still provide important functionality to subsequent child classes.
 
 ### Inheritance / extension
-    * Python has support for multiple inheritance.
+   * Python has support for multiple inheritance.
 ```python
 class LineCook(Employee, Person):
     ...
@@ -295,7 +295,7 @@ except ValueError:
 ```
    
 ### Lambda expressions, closures, or functions as types
-    * Lambda expressions are easy to implement in Python.
+   * Lambda expressions are easy to implement in Python.
 ```python
 g = lambda x: x**2
 
