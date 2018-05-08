@@ -58,17 +58,17 @@ import java.io;
 1) **This? Self?**
   * Java uses this. Within an instance method or a constructor, this is a reference to the current object, the object whose method or constructor is being called.  You can refer to any member of the current object from within an instance method or a constructor by using this
   
-  ```java
-	public Obj(int x, int y) {
-        		this.x = x;
-        		this.y = y;
-    	}
-  ```
+```java
+public Obj(int x, int y) {
+	this.x = x;
+	this.y = y;
+}
+```
   
 ### Properties
 
 1) **Getters and setters...write your own or built in?**
-  * Getters and setters are not built in, they have to be written, but they are very simple.
+  	* Getters and setters are not built in, they have to be written, but they are very simple.
   
   ```java
   public int getHeight() {
@@ -97,9 +97,13 @@ import java.io;
 ### Memory management
 
 1) **How is it handled?**
+	* Java objects exist in the heap, which is created and managed by the JVM.
 2) **How does it work?**
+	* The JVM dynamically allocates and deallocates memory at runtime.
 3) **Garbage collection?**
+	* Once the heap is filled or once the program has completed, the garbage collector is ran which removes unused objects, thus freeing up more space and preventing overflow issues.
 4) **Automatic reference counting?**
+	* The garbage collector tracks the number of references to a given object in memory, and then algorithmically decides if the instance is still in use or not.
 
 ### Comparisons of references and values
 
