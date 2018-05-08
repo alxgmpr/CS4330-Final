@@ -57,6 +57,13 @@ public class Point {
 
 1) **Defining**
   * Classes have state and behavior in the form of instance variables and methods.
+
+```java
+class MyClass {
+    // field, constructor, and 
+    // method declarations
+}
+```
 2) **Creating new instances**
   * Instances of objects are created using the “new” keyword and a call to the constructor.
 3) **Constructing / initializing**
