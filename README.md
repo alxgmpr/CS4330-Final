@@ -122,10 +122,12 @@ import java.io;
 ### Procedural programming
 
 1) **Does the language support procedural programming?**
+ * No, Java is designed to be completely object oriented and non procedural.
 
 ### Functional programming
 
 1) **Does the language support functional programming?**
+ * Yes, in Java 8, Lambda expressions were introduced. They are said to be among the biggest features of the Java 8 version. Lambda expression allows functional programming, and makes development simpler in some areas.
 
 ### Multithreading
 
