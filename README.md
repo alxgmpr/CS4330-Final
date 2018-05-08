@@ -269,8 +269,27 @@ class Particle:
 1) **What does the language support?**
     * Python has interface support in the form of abstract base classes, which were introduced after v2.6.
 2) **What abilities does it have?**
+	* Abstract base classes provide some level of functionality while still requiring the remainder of the method to be implemented later on. This functionality is provided with the `ABC` module (Abstract Base Class).
 3) **How is it used?**
     * Abstract base classes can be used in Python when you don't want to instantiate the parent class, but still provide important functionality to subsequent child classes.
+
+```python
+from abc import ABC, abstractmethod
+ 
+class AbstractClassExample(ABC):
+    
+    @abstractmethod
+    def do_something(self):
+        print("Some implementation!")
+        
+class AnotherSubclass(AbstractClassExample):
+    def do_something(self):
+        super().do_something()
+        print("The enrichment from AnotherSubclass")
+        
+x = AnotherSubclass()
+x.do_something()
+```
 
 ### Inheritance / extension
    * Python has support for multiple inheritance.
