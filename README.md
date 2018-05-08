@@ -96,7 +96,10 @@ public Obj(int x, int y) {
 ### Reflection
 
 1) **What reflection abilities are supported?**
+	* Java allows the inspection of methods, classes, fields, and interfaces at runtime. 
 2) **How is reflection used?**
+	* Java reflection is performed using the `java.lang.reflect` package.
+	* Java reflection is used to gather knowledge on the program without knowing the actual name of the fields beforehand.
 
 ### Memory management
 
