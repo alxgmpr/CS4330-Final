@@ -36,7 +36,7 @@ import java.io;
 ### Types
 
 1) **What types does the language support?**
-  * Java supports 8 primitive types. int, double, float, long, short, boolean, byte, and char.
+  * Java supports 8 primitive types. `int, double, float, long, short, boolean, byte, char`
 2) **Are both reference and value types supported?**
   * Java supports reference types and has the ability to pass by value and pass by reference.
 3) **Can new value types be created?**
@@ -285,7 +285,7 @@ class LineCook(Employee, Person):
 1) **What reflection abilities are supported?**
 	* Python provides several functions for reflection
 ```python
-type(), isinstance(), callable(), dir() and getattr()
+type(), isinstance(), callable(), dir(), getattr()
 ```
 2) **How is reflection used?**
 	* Reflection can be used in Python to import dynamically loaded modules
