@@ -121,6 +121,16 @@ public Obj(int x, int y) {
 ### Errors and exception handling
 ### Lambda expressions, closures, or functions as types
 ### Implementation of listeners and event handlers
+ * Java uses multiple different listeners and event handlers especially for handling different events such as actionEvent and mouseClick.
+ 
+```java
+server.addEventListener("message", clientData.class, new DataListener<clientData>() {        
+	@Override        
+	public void onData(SocketIOClient client, clientData data, AckRequest ackRequest) throws Exception {            System.out.println("Message from client: " + data.getMessage());        
+	}    
+});
+```
+
 ### Singleton
 
 1) **How is a singleton implemented?**
