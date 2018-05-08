@@ -91,6 +91,8 @@ public Obj(int x, int y) {
 3) **How is it used?**
 
 ### Inheritance / extension
+ * Java supports inheritance, but it does not support multiple inheritance.  Classes that don’t inherit from another class will always inherit from Object.
+
 ### Reflection
 
 1) **What reflection abilities are supported?**
