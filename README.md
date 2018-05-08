@@ -72,11 +72,11 @@ import java.io;
   
   ```java
     public int getHeight() {
-    		return this.height;
+    	return this.height;
 	}
 
 	public void setHeight(int height) {
-    		this.height = height;
+    	this.height = height;
 	}
   ```
 2) **Backing variables?**
