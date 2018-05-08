@@ -119,7 +119,7 @@ public Obj(int x, int y) {
 	* Exceptions are thrown when a null variable is improperly referenced.
 
 ### Errors and exception handling
-	* Java uses `try` and `catch` blocks to contain exceptions and handle them as they occur.
+   * Java uses `try` and `catch` blocks to contain exceptions and handle them as they occur.
 ```java
 try
 {
