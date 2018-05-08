@@ -112,6 +112,7 @@ public Obj(int x, int y) {
 ### Comparisons of references and values
 
 1) **How are values compared? (i.e. comparing two strings)**
+	* To properly compare objects in Java, one should use the `equals()` method. This is because the `==` operator will compare the object references, which may not be equal even if their contents are.
 
 ### Null / nil references
 
