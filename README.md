@@ -87,11 +87,11 @@ public Obj(int x, int y) {
 ### Interfaces / protocols
 
 1) **What does the language support?**
- * Java supports interfaces
+	* Java supports interfaces
 2) **What abilities does it have?**
- * Interfaces facilitate the key concepts in Object Oriented Programming such as abstraction, inheritance, and polymorphism.
+	* Interfaces facilitate the key concepts in Object Oriented Programming such as abstraction, inheritance, and polymorphism.
 3) **How is it used?**
- * Creation:
+	* Creation:
 
 ```java	
 	interface myInterface {  
@@ -99,7 +99,7 @@ public Obj(int x, int y) {
 	}
 ```
 
- * Implementation:
+  * Implementation:
 	
 ```java
 	class TestClass implements myInterface {  
