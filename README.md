@@ -36,11 +36,22 @@ import java.io;
 ### Types
 
 1) **What types does the language support?**
-  * Java supports 8 primitive types. `int, double, float, long, short, boolean, byte, char`
+  	* Java supports 8 primitive types. `int, double, float, long, short, boolean, byte, char`
 2) **Are both reference and value types supported?**
-  * Java supports reference types and has the ability to pass by value and pass by reference.
+  	* Java supports reference types and has the ability to pass by value and pass by reference.
 3) **Can new value types be created?**
-  * Java has the ability to create new object types.
+  	* Java has the ability to create new object types.
+```java
+public class Point {
+    public int x = 0;
+    public int y = 0;
+    //constructor
+    public Point(int a, int b) {
+        x = a;
+        y = b;
+    }
+}
+```
 
 ### Classes
 
