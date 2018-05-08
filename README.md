@@ -36,23 +36,49 @@ import java.io;
 ### Types
 
 1) **What types does the language support?**
+  * Java supports 8 primitive types. int, double, float, long, short, boolean, byte, and char.
 2) **Are both reference and value types supported?**
+  * Java supports reference types and has the ability to pass by value and pass by reference.
 3) **Can new value types be created?**
+  * Java has the ability to create new object types.
 
 ### Classes
 
 1) **Defining**
+  * Classes have state and behavior in the form of instance variables and methods.
 2) **Creating new instances**
+  * Instances of objects are created using the “new” keyword and a call to the constructor.
 3) **Constructing / initializing**
+  * Every class has a constructor even if you do not explicitly write a constructor. There is always a default constructor that takes no arguments, but if you explicitly define a no-arg constructor, the default constructor disappears.
 4) **Destructing / de-initializing**
+  * Java has a garbage collector that automatically destroys an object when there are no longer any references to it.
 
 ### Instance reference name in data type (class)
 
 1) **This? Self?**
-
+  * Java uses this. Within an instance method or a constructor, this is a reference to the current object, the object whose method or constructor is being called.  You can refer to any member of the current object from within an instance method or a constructor by using this
+  
+  ```java
+	public Obj(int x, int y) {
+        		this.x = x;
+        		this.y = y;
+    	}
+  ```
+  
 ### Properties
 
 1) **Getters and setters…write your own or built in?**
+  * Getters and setters are not built in, they have to be written, but they are very simple.
+  
+  ```java
+  public int getHeight() {
+    		return this.height;
+	}
+
+	public void setHeight(int height) {
+    		this.height = height;
+	}
+  ```
 2) **Backing variables?**
 3) **Computed properties?**
 
