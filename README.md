@@ -80,7 +80,9 @@ public Obj(int x, int y) {
 	}
   ```
 2) **Backing variables?**
+	* Java does not support backing variables.
 3) **Computed properties?**
+	* Java does not support computed properties.
 
 ### Interfaces / protocols
 
