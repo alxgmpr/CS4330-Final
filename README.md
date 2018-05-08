@@ -1,6 +1,6 @@
 # CS4330 Final Project
 An object oriented comparison of Python and Java
-Due 5/7/18
+
 Alex Gompper, Darrell Martin, Zach Pierucci
 
 # Java
@@ -56,7 +56,7 @@ import java.io;
 ### Instance reference name in data type (class)
 
 1) **This? Self?**
-  * Java uses ```this```. Within an instance method or a constructor, ```this``` is a reference to the current object, the object whose method or constructor is being called.  You can refer to any member of the current object from within an instance method or a constructor by using ```this```
+  * Java uses this. Within an instance method or a constructor, this is a reference to the current object, the object whose method or constructor is being called.  You can refer to any member of the current object from within an instance method or a constructor by using this
   
   ```java
 	public Obj(int x, int y) {
@@ -67,16 +67,16 @@ import java.io;
   
 ### Properties
 
-1) **Getters and setters…write your own or built in?**
+1) **Getters and setters...write your own or built in?**
   * Getters and setters are not built in, they have to be written, but they are very simple.
   
   ```java
-    public int getHeight() {
-    	return this.height;
+  public int getHeight() {
+    		return this.height;
 	}
 
 	public void setHeight(int height) {
-    	this.height = height;
+    		this.height = height;
 	}
   ```
 2) **Backing variables?**
@@ -130,55 +130,7 @@ import java.io;
 ### Multithreading
 
 1) **Threads or thread-like abilities**
- * Java supports multi-threaded applications and it is actually multi-threaded by default (i.e. the JVM is one thread and your program is another).
 2) **How is multitasking accomplished?**
- * By either implementing the ```Runnable``` interface
- 
-```java
-class MultithreadingDemo implements Runnable
-{
-    public void run()
-    {
-     	try
-        {
-            // Displaying the thread that is running
-            System.out.println ("Thread " +
-                                Thread.currentThread().getId() +
-                                " is running");
- 
-        }
-        catch (Exception e)
-        {
-            // Throwing an exception
-            System.out.println ("Exception is caught");
-        }
-    }
-}
-```
- * Or by Extending the ```Thread``` class
-
-```java
-class MultithreadingDemo extends Thread
-{
-    public void run()
-    {
-      	try
-        {
-            // Displaying the thread that is running
-            System.out.println ("Thread " +
-                  Thread.currentThread().getId() +
-                  " is running");
- 
-        }
-        catch (Exception e)
-        {
-            // Throwing an exception
-            System.out.println ("Exception is caught");
-        }
-    }
-}
-```
-
 
 ---
 
@@ -331,7 +283,20 @@ class LineCook(Employee, Person):
 ### Reflection
 
 1) **What reflection abilities are supported?**
+	* Python provides several functions for reflection
+```python
+type(), isinstance(), callable(), dir() and getattr()
+```
 2) **How is reflection used?**
+	* Reflection can be used in Python to import dynamically loaded modules
+```python
+def my_import(name):
+    components = name.split('.')
+    mod = __import__(components[0])
+    for comp in components[1:]:
+        mod = getattr(mod, comp)
+    return mod
+```
 
 ### Memory management
 
@@ -348,6 +313,24 @@ class LineCook(Employee, Person):
 ### Comparisons of references and values
 
 1) **How are values compared? (i.e. comparing two strings)**
+	* The 'Pythonic' way to compare strings generally uses the `is` operator instead of the `==` operator.
+	* In Python, a True return value from an `is` comparison signifies that the two instances being compared are *identical*, whereas the `==` operator signifies the two are *equal*.
+```python
+a = "alex"
+z = "zach"
+
+a is z
+# False
+
+a is "alex"
+# True
+
+id(a) == id("alex")
+# True
+
+id(a) is id("alex")
+# False
+```
 
 ### Null / nil references
 
@@ -377,9 +360,8 @@ g(3)  # Output: 9
 ```
 
 ### Implementation of listeners and event handlers
-
-    * Python has limited support for event handling. One of the more popular methodologies is to subscribe to a methods event.
-    * There are other third party libraries for event listeners such as [PyNotify](https://pypi.org/project/py-notify/).
+   * Python has limited support for event handling. One of the more popular methodologies is to subscribe to a methods event.
+   * There are other third party libraries for event listeners such as [PyNotify](https://pypi.org/project/py-notify/).
 ```python
 class MyBroadcaster()
     def __init__():
@@ -395,8 +377,31 @@ b.onChange.fire()
 ### Singleton
 
 1) **How is a singleton implemented?**
+	* One pattern for creating a singleton is to use two constructors, ensuring that only one instance is ever available at a time.
+```python
+class OnlyOne:
+    class __OnlyOne:
+        def __init__(self, arg):
+            self.val = arg
+        def __str__(self):
+            return repr(self) + self.val
+    instance = None
+    def __init__(self, arg):
+        if not OnlyOne.instance:
+            OnlyOne.instance = OnlyOne.__OnlyOne(arg)
+        else:
+            OnlyOne.instance.val = arg
+    def __getattr__(self, name):
+        return getattr(self.instance, name)
+```
 2) **Can it be made thread-safe?**
+	* This pattern can be made thread-safe by interrupting the ongoing threads before operating on the singleton. 
+	* A better method is to utilize the `Queue` module (thread-safe) to provide a means of exchanging information across threads.
 3) **Can the singleton instance be lazily instantiated?**
+	* With the above pattern, singleton instances can be lazily instantiated.
+```python
+x = OnlyOne('dab')
+```
 
 ### Procedural programming
 
