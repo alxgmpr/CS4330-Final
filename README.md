@@ -56,7 +56,7 @@ import java.io;
 ### Instance reference name in data type (class)
 
 1) **This? Self?**
-  * Java uses ```java this```. Within an instance method or a constructor, ```java this``` is a reference to the current object, the object whose method or constructor is being called.  You can refer to any member of the current object from within an instance method or a constructor by using ```java this```
+  * Java uses ```this```. Within an instance method or a constructor, ```this``` is a reference to the current object, the object whose method or constructor is being called.  You can refer to any member of the current object from within an instance method or a constructor by using ```this```
   
   ```java
 	public Obj(int x, int y) {
