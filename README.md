@@ -114,7 +114,9 @@ public Obj(int x, int y) {
 ### Null / nil references
 
 1) **Which does the language use? (null/nil/etc)**
+	* Java uses `null`
 2) **Does the language have features for handling null/nil references?**
+	* Exceptions are thrown when a null variable is improperly referenced.
 
 ### Errors and exception handling
 ### Lambda expressions, closures, or functions as types
