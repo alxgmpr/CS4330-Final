@@ -71,7 +71,7 @@ import java.io;
   * Getters and setters are not built in, they have to be written, but they are very simple.
   
   ```java
-  	public int getHeight() {
+  public int getHeight() {
     		return this.height;
 	}
 
