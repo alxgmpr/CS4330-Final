@@ -67,7 +67,7 @@ public class Point {
 ### Instance reference name in data type (class)
 
 1) **This? Self?**
-  * Java uses this. Within an instance method or a constructor, this is a reference to the current object, the object whose method or constructor is being called.  You can refer to any member of the current object from within an instance method or a constructor by using this
+	* Java uses this. Within an instance method or a constructor, this is a reference to the current object, the object whose method or constructor is being called.  You can refer to any member of the current object from within an instance method or a constructor by using this
   
 ```java
 public Obj(int x, int y) {
@@ -81,15 +81,15 @@ public Obj(int x, int y) {
 1) **Getters and setters...write your own or built in?**
   	* Getters and setters are not built in, they have to be written, but they are very simple.
   
-  ```java
-  public int getHeight() {
-    		return this.height;
-	}
+```java
+public int getHeight() {
+	return this.height;
+}
 
-	public void setHeight(int height) {
-    		this.height = height;
-	}
-  ```
+public void setHeight(int height) {
+	this.height = height;
+}
+```
 2) **Backing variables?**
 	* Java does not support backing variables.
 3) **Computed properties?**
@@ -105,21 +105,21 @@ public Obj(int x, int y) {
 	* Creation:
 
 ```java	
-	interface myInterface {  
+interface myInterface {  
 	...
-	}
+}
 ```
 
-  * Implementation:
+   * Implementation:
 	
 ```java
-	class TestClass implements myInterface {  
+class TestClass implements myInterface {  
 	...
-	}
+}
 ```
 
 ### Inheritance / extension
- * Java supports inheritance, but it does not support multiple inheritance.  Classes that don’t inherit from another class will always inherit from Object.
+* Java supports inheritance, but it does not support multiple inheritance.  Classes that don’t inherit from another class will always inherit from Object.
 
 ### Reflection
 
