@@ -87,8 +87,25 @@ public Obj(int x, int y) {
 ### Interfaces / protocols
 
 1) **What does the language support?**
+ * Java supports interfaces
 2) **What abilities does it have?**
+ * Interfaces facilitate the key concepts in Object Oriented Programming such as abstraction, inheritance, and polymorphism.
 3) **How is it used?**
+ * Creation:
+
+```java	
+	interface myInterface {  
+	...
+	}
+```
+
+ * Implementation:
+	
+```java
+	class TestClass implements myInterface {  
+	...
+	}
+```
 
 ### Inheritance / extension
  * Java supports inheritance, but it does not support multiple inheritance.  Classes that don’t inherit from another class will always inherit from Object.
